@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>logo.png</file>
+        <file>MenuButton.png</file>
+        <file>baseline-menu-24px.svg</file>
+    </qresource>
+</RCC>
