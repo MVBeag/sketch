@@ -59,39 +59,7 @@ Window {
 
             }
 
-
-            Rectangle {
-                id:vert
-                x: -10; y: wi.height/2-50; width: parent.width; height: parent.height;
-                color: "green"
-
-
-                Text {
-                    id: justforfun
-                    font.family: "Helvetica"
-                    font.pixelSize: 32
-                    text: tapetape.text
-                }
-
-                TextInput {
-                    id:tapetape
-                    x:100; y: 100;
-                    text: "tapetape"
-                    anchors.left: parent.left
-
-                }
-            }
-            Image {
-                id: logo
-                source: "logo.png"
-                //fillMode: Image.PreserveAspectFit
-                //scale: 0.5
-                anchors.right: parent.right                //anchors.verticalCenter: parent
-                //anchors.margins: 10
-            }
         }
-
-
 
     }
 
