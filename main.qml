@@ -10,6 +10,7 @@ Window {
     height: 480
     title: qsTr("click-dummy-hardkeys")
 
+    /*To start with a new repository git clone https://github.com/VoegelMichael/sketch.git*/
     Rectangle {
         id: background
         color: "black"
