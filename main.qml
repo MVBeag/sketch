@@ -23,10 +23,8 @@ Window {
                 Layout.alignment: Qt.AlignCenter
                 color: "black"
                 border.color: "white"
-                Layout.preferredWidth: parent.widt
+                Layout.preferredWidth: parent.width
                 Layout.preferredHeight: 40
-                anchors.left: parent.left
-                anchors.right: parent.right
                 Layout.topMargin:10
 
                 /*Logo for the Menu, to put the white color I was using ColorOverlay*/
@@ -43,9 +41,7 @@ Window {
                     anchors.fill: menubron
                     source: menubron
                     color: "white"
-
                 }
-
                 Text {
                     id:homebron
                     text: "Home"
