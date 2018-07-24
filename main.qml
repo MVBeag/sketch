@@ -73,23 +73,14 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: parent.height
+                        Layout.preferredHeight: 480-40-10
                         Layout.leftMargin: 10
                         radius: 5
 
                         ColumnLayout {
                             id: lamp1frameRows
                             anchors.fill:parent
-                            spacing: 2
-                            Rectangle{
-                                id: lamp1Number
-                                border.color: "White"
-                                color: "pink"
-                                opacity: 0.5
-                                Layout.alignment: Qt.AlignCenter
-                                Layout.preferredWidth: parent.width
-                                Layout.preferredHeight: 60
-                            }
+                            spacing: 1
                             Rectangle{
                                 id: lampEnergyFrame
                                 border.color: "White"
@@ -97,7 +88,7 @@ Window {
                                 opacity: 0.5
                                 Layout.alignment: Qt.AlignCenter
                                 Layout.preferredWidth: parent.width
-                                Layout.preferredHeight: 60
+                                Layout.preferredHeight: (480-40-10)/2
                                 Text {
                                     anchors.centerIn: parent
                                     font.family: "Helvetica"
@@ -106,31 +97,31 @@ Window {
                                 }
                             }
                             Rectangle{
-                                id: lampTimeFrame
-                                border.color: "White"
-                                color: "Grey"
-                                opacity: 0.5
-                                Layout.alignment: Qt.AlignCenter
-                                Layout.preferredWidth: parent.width
-                                Layout.preferredHeight: 60
-                            }
-                            Rectangle{
                                 id: lampFTFrame
                                 border.color: "White"
                                 color: "yellow"
                                 opacity: 0.5
                                 Layout.alignment: Qt.AlignCenter
                                 Layout.preferredWidth: parent.width
-                                Layout.preferredHeight: 60
+                                Layout.preferredHeight: (480-40-10)*15/100
                             }
                             Rectangle{
                                 id: lampDelayFrame
-                                border.color: "White"
+                                border.color: "red"
                                 color: "black"
                                 opacity: 0.5
                                 Layout.alignment: Qt.AlignCenter
                                 Layout.preferredWidth: parent.width
-                                Layout.preferredHeight: 60
+                                Layout.preferredHeight: (480-40-10)*15/100
+                            }
+                            Rectangle{
+                                id: onOff
+                                border.color: "green"
+                                color: "black"
+                                opacity: 0.5
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: (480-40-10)*15/100
                             }
                         }
 
@@ -141,13 +132,16 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: parent.height
+                        Layout.preferredHeight: 480-40-10
                         radius: 5
-                        Text {
-                            anchors.centerIn: parent
-                            font.family: "Helvetica"
-                            font.pixelSize: 32
-                            text: "7.5"
+                        GridLayout {
+                            columns: 1
+                            rows: 4
+                            //spacing: 1
+                            Rectangle{color: "red"; width: 100; height: 100}
+                            Rectangle{color: "green"; width: 100; height: 100}
+                            Rectangle{color: "blue"; width: 100; height: 100}
+                            Rectangle{color: "cyan"; width: 100; height: 100}
                         }
                     }
                     Rectangle {
