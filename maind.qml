@@ -10,7 +10,6 @@ Window {
     height: 480
     title: qsTr("click-dummy-hardkeys")
 
-    /*To start with a new repository git clone https://github.com/VoegelMichael/sketch.git*/
     Rectangle {
         id: background
         color: "black"
@@ -23,8 +22,10 @@ Window {
                 Layout.alignment: Qt.AlignCenter
                 color: "black"
                 border.color: "white"
-                Layout.preferredWidth: parent.width
+                Layout.preferredWidth: parent.widt
                 Layout.preferredHeight: 40
+                anchors.left: parent.left
+                anchors.right: parent.right
                 Layout.topMargin:10
 
                 /*Logo for the Menu, to put the white color I was using ColorOverlay*/
@@ -41,7 +42,9 @@ Window {
                     anchors.fill: menubron
                     source: menubron
                     color: "white"
+
                 }
+
                 Text {
                     id:homebron
                     text: "Home"
@@ -61,8 +64,8 @@ Window {
                 border.color: "white"
                 Layout.preferredWidth: mainWindows.width
                 Layout.preferredHeight: 480-40-10
-                //anchors.left: mainWindows.left
-                //anchors.right: mainWindows.right
+                anchors.left: mainWindows.left
+                anchors.right: mainWindows.right
 
                 RowLayout {
                     id: layoutLampsMaster
@@ -73,33 +76,31 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10
+                        Layout.preferredHeight: parent.height
                         Layout.leftMargin: 10
                         radius: 5
 
                         ColumnLayout {
                             id: lamp1frameRows
+                            anchors.fill:parent
+                            spacing: 2
                             Rectangle{
                                 id: lamp1Number
-                                Layout.alignment: Qt.AlignCenter
-                                border.color: "white"
+                                border.color: "White"
                                 color: "pink"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 30
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: 60
                             }
                             Rectangle{
                                 id: lampEnergyFrame
-                                Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
                                 color: "green"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 120
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: 60
                                 Text {
                                     anchors.centerIn: parent
                                     font.family: "Helvetica"
@@ -109,47 +110,30 @@ Window {
                             }
                             Rectangle{
                                 id: lampTimeFrame
-                                Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
-                                color: "yellow"
+                                color: "Grey"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: 60
                             }
                             Rectangle{
                                 id: lampFTFrame
-                                Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
                                 color: "yellow"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.alignment: Qt.AlignCenter
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: 60
                             }
                             Rectangle{
                                 id: lampDelayFrame
-                                Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
                                 color: "black"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
-                            }
-                            Rectangle{
-                                id: onOffMod
                                 Layout.alignment: Qt.AlignCenter
-                                border.color: "White"
-                                color: "black"
-                                opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.preferredWidth: parent.width
+                                Layout.preferredHeight: 60
                             }
                         }
 
@@ -160,16 +144,13 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10
+                        Layout.preferredHeight: parent.height
                         radius: 5
-                        GridLayout {
-                            columns: 1
-                            rows: 4
-                            //spacing: 1
-                            Rectangle{color: "red"; width: 100; height: 100}
-                            Rectangle{color: "green"; width: 100; height: 100}
-                            Rectangle{color: "blue"; width: 100; height: 100}
-                            Rectangle{color: "cyan"; width: 100; height: 100}
+                        Text {
+                            anchors.centerIn: parent
+                            font.family: "Helvetica"
+                            font.pixelSize: 32
+                            text: "7.5"
                         }
                     }
                     Rectangle {
