@@ -73,12 +73,13 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10
+                        Layout.preferredHeight: 480-40-10 //430
                         Layout.leftMargin: 10
-                        radius: 5
+                        radius: 10
 
                         ColumnLayout {
                             id: lamp1frameRows
+                            spacing: 0
                             Rectangle{
                                 id: lamp1Number
                                 Layout.alignment: Qt.AlignCenter
@@ -88,35 +89,63 @@ Window {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 30
+                                Layout.preferredHeight: 40
+                                Row {
+                                    spacing: 0
+                                    Rectangle {
+                                        color: "red";
+                                        /*
+                                        Layout.fillWidth: true
+                                        Layout.fillHeight: true
+                                        Layout.preferredWidth: 20
+                                        */
+                                        Layout.preferredWidth: 20
+                                        Layout.preferredHeight: 40
+                                    }
+                                    Rectangle {
+                                        color: "red";
+                                        Layout.fillWidth: true
+                                        Layout.fillHeight: true
+                                        Layout.preferredWidth: lamp1frame.width
+                                        Layout.preferredHeight: 40
+                                    }
+                                    Rectangle {
+                                        color: "red";
+                                        Layout.fillWidth: true
+                                        Layout.fillHeight: true
+                                        Layout.preferredWidth: lamp1frame.width
+                                        Layout.preferredHeight: 40
+                                    }
+                                }
                             }
                             Rectangle{
                                 id: lampEnergyFrame
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
-                                color: "green"
-                                opacity: 0.5
+                                color: "pink"
+                                opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 120
+                                Layout.preferredHeight: 125
                                 Text {
                                     anchors.centerIn: parent
                                     font.family: "Helvetica"
                                     font.pixelSize: 32
                                     text: "7.5"
+                                    opacity: 1
                                 }
                             }
                             Rectangle{
                                 id: lampTimeFrame
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
-                                color: "yellow"
+                                color: "pink"
                                 opacity: 0.5
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.preferredHeight: 50
                             }
                             Rectangle{
                                 id: lampFTFrame
@@ -127,7 +156,7 @@ Window {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.preferredHeight: 73
                             }
                             Rectangle{
                                 id: lampDelayFrame
@@ -138,7 +167,7 @@ Window {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.preferredHeight: 71
                             }
                             Rectangle{
                                 id: onOffMod
@@ -149,7 +178,7 @@ Window {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                Layout.preferredHeight: 70
                             }
                         }
 
