@@ -17,7 +17,6 @@ Window {
         anchors.fill: parent
         ColumnLayout{
             spacing: 10
-
             Rectangle {
                 id: topframe
                 Layout.alignment: Qt.AlignCenter
@@ -59,8 +58,8 @@ Window {
                 id: bottomframe
                 color: "black"
                 border.color: "black"
-                Layout.preferredWidth: mainWindows.width
-                Layout.preferredHeight: 480-40-10
+                width: 640
+                height: 430
 
                 RowLayout {
                     id: layoutLampsMaster
@@ -68,11 +67,9 @@ Window {
                     Rectangle {
                         id: lamp1frame
                         color: "#60C6F2"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10
-                        Layout.leftMargin: 10
+                        width: 150
+                        height: 430
+                        Layout.leftMargin: 16
                         radius: 10
 
                         ColumnLayout {
@@ -83,11 +80,8 @@ Window {
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "white"
                                 color: "#60C6F2"
-                                opacity: 1
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 40
+                                width: 150
+                                height: 40
                                 Row {
                                     spacing: 0
                                     Rectangle {
@@ -117,10 +111,8 @@ Window {
                                 border.color: "White"
                                 color: "#60C6F2"
                                 opacity: 1
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 125
+                                width: 150
+                                height: 125
                                 Text {
                                     anchors.centerIn: parent
                                     font.family: "Helvetica"
@@ -135,10 +127,8 @@ Window {
                                 border.color: "White"
                                 color: "#60C6F2"
                                 opacity: 0.5
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 50
+                                width: 150
+                                height: 50
                             }
                             Rectangle{
                                 id: lampFTFrame
@@ -146,10 +136,8 @@ Window {
                                 border.color: "black"
                                 color: "#20283F"
                                 opacity: 1
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 73
+                                width: 150
+                                height: 73
                             }
                             Rectangle{
                                 id: lampDelayFrame
@@ -157,43 +145,37 @@ Window {
                                 border.color: "black"
                                 color: "#20283F"
                                 opacity: 1
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 71
+                                width: 150
+                                height: 71
                             }
                             /*only a half part from the rectangle has to be rounded*/
+                            Rectangle{
+                                id: onOffModRound
+                                color: "red"
+                                height: 10
+                                width: 150
+                                //anchors.top: onOffMod.top
+                            }
                             Rectangle{
                                 id: onOffMod
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "black"
                                 color: "#20283F"
                                 opacity: 1
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: lamp1frame.width
-                                Layout.preferredHeight: 70
-                                radius: 10
-                            }
-                            Rectangle{
-                                id: onOffModRound
-                                color: "#20283F"
-                                height: onOffMod.radius
-                                anchors.left: onOffMod.left
-                                anchors.right: onOffMod.right
-                                anchors.top: onOffMod.top
+                                width: 150
+                                height: 70
+                                //radius: 10
                             }
                         }
 
                     }
                     Rectangle {
                         id: lamp2frame
-                        color: "#304151"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10
-                        radius: 5
+                        color: "#60C6F2"
+                        width: 150
+                        height: 430
+                        Layout.leftMargin: 16
+                        radius: 10
                         GridLayout {
                             columns: 1
                             rows: 4
@@ -206,12 +188,11 @@ Window {
                     }
                     Rectangle {
                         id: lamp3frame
-                        color: "#304151"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: 100
-                        Layout.preferredHeight: parent.height
-                        radius: 5
+                        color: "#60C6F2"
+                        width: 150
+                        height: 430
+                        Layout.leftMargin: 16
+                        radius: 10
                         Text {
                             anchors.centerIn: parent
                             font.family: "Helvetica"
@@ -221,13 +202,12 @@ Window {
                     }
                     Rectangle {
                         id: mainframe
-                        color: "#304151"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: 20
-                        Layout.preferredHeight: parent.height
-                        Layout.rightMargin: 10
-                        radius: 5
+                        color: "#60C6F2"
+                        width: 90
+                        height: 430
+                        Layout.leftMargin: 16
+                        Layout.rightMargin: 16
+                        radius: 10
                     }
                 }
             }
