@@ -58,11 +58,9 @@ Window {
             Rectangle {
                 id: bottomframe
                 color: "black"
-                border.color: "white"
+                border.color: "black"
                 Layout.preferredWidth: mainWindows.width
                 Layout.preferredHeight: 480-40-10
-                //anchors.left: mainWindows.left
-                //anchors.right: mainWindows.right
 
                 RowLayout {
                     id: layoutLampsMaster
@@ -73,7 +71,7 @@ Window {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.preferredWidth: 100
-                        Layout.preferredHeight: 480-40-10 //430
+                        Layout.preferredHeight: 480-40-10
                         Layout.leftMargin: 10
                         radius: 10
 
@@ -84,8 +82,8 @@ Window {
                                 id: lamp1Number
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "white"
-                                color: "pink"
-                                opacity: 0.5
+                                color: "#60C6F2"
+                                opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
@@ -94,11 +92,6 @@ Window {
                                     spacing: 0
                                     Rectangle {
                                         color: "red";
-                                        /*
-                                        Layout.fillWidth: true
-                                        Layout.fillHeight: true
-                                        Layout.preferredWidth: 20
-                                        */
                                         Layout.preferredWidth: 20
                                         Layout.preferredHeight: 40
                                     }
@@ -122,7 +115,7 @@ Window {
                                 id: lampEnergyFrame
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
-                                color: "pink"
+                                color: "#60C6F2"
                                 opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
@@ -140,7 +133,7 @@ Window {
                                 id: lampTimeFrame
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
-                                color: "pink"
+                                color: "#60C6F2"
                                 opacity: 0.5
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
@@ -150,9 +143,9 @@ Window {
                             Rectangle{
                                 id: lampFTFrame
                                 Layout.alignment: Qt.AlignCenter
-                                border.color: "White"
-                                color: "yellow"
-                                opacity: 0.5
+                                border.color: "black"
+                                color: "#20283F"
+                                opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
@@ -161,24 +154,34 @@ Window {
                             Rectangle{
                                 id: lampDelayFrame
                                 Layout.alignment: Qt.AlignCenter
-                                border.color: "White"
-                                color: "black"
-                                opacity: 0.5
+                                border.color: "black"
+                                color: "#20283F"
+                                opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
                                 Layout.preferredHeight: 71
                             }
+                            /*only a half part from the rectangle has to be rounded*/
                             Rectangle{
                                 id: onOffMod
                                 Layout.alignment: Qt.AlignCenter
-                                border.color: "White"
-                                color: "black"
-                                opacity: 0.5
+                                border.color: "black"
+                                color: "#20283F"
+                                opacity: 1
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 Layout.preferredWidth: lamp1frame.width
                                 Layout.preferredHeight: 70
+                                radius: 10
+                            }
+                            Rectangle{
+                                id: onOffModRound
+                                color: "#20283F"
+                                height: onOffMod.radius
+                                anchors.left: onOffMod.left
+                                anchors.right: onOffMod.right
+                                anchors.top: onOffMod.top
                             }
                         }
 
