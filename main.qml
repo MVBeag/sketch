@@ -13,7 +13,7 @@ Window {
     /*To start with a new repository git clone https://github.com/VoegelMichael/sketch.git*/
     Rectangle {
         id: background
-        color: "black"
+        color: "grey"
         anchors.fill: parent
         ColumnLayout{
             spacing: 10
@@ -56,8 +56,7 @@ Window {
 
             Rectangle {
                 id: bottomframe
-                color: "black"
-                border.color: "black"
+                color: "#e27373"
                 width: 640
                 height: 430
 
@@ -66,11 +65,10 @@ Window {
                     anchors.fill: bottomframe
                     Rectangle {
                         id: lamp1frame
-                        color: "#60C6F2"
+                        color: "red"
                         width: 150
                         height: 430
                         Layout.leftMargin: 16
-                        radius: 10
 
                         ColumnLayout {
                             id: lamp1frameRows
@@ -85,23 +83,36 @@ Window {
                                 Row {
                                     spacing: 0
                                     Rectangle {
-                                        color: "red";
-                                        Layout.preferredWidth: 20
-                                        Layout.preferredHeight: 40
+                                        color: "#60C6F2"
+                                        border.color: "white"
+                                        width: 30
+                                        height: 40
+                                        Text {
+                                            anchors.centerIn: parent
+                                            font.family: "Helvetica"
+                                            font.pixelSize: 20
+                                            text: "1"
+                                            opacity: 1
+                                        }
                                     }
                                     Rectangle {
-                                        color: "red";
-                                        Layout.fillWidth: true
-                                        Layout.fillHeight: true
-                                        Layout.preferredWidth: lamp1frame.width
-                                        Layout.preferredHeight: 40
+                                        color: "#60C6F2"
+                                        border.color: "white"
+                                        width: 90
+                                        height: 40
                                     }
                                     Rectangle {
-                                        color: "red";
-                                        Layout.fillWidth: true
-                                        Layout.fillHeight: true
-                                        Layout.preferredWidth: lamp1frame.width
-                                        Layout.preferredHeight: 40
+                                        color: "#60C6F2"
+                                        border.color: "white"
+                                        width: 30
+                                        height: 40
+                                        Text {
+                                            anchors.centerIn: parent
+                                            font.family: "Helvetica"
+                                            font.pixelSize: 20
+                                            text: "01"
+                                            opacity: 1
+                                        }
                                     }
                                 }
                             }
@@ -126,9 +137,16 @@ Window {
                                 Layout.alignment: Qt.AlignCenter
                                 border.color: "White"
                                 color: "#60C6F2"
-                                opacity: 0.5
+                                opacity: 1
                                 width: 150
                                 height: 50
+                                Text {
+                                    anchors.centerIn: parent
+                                    font.family: "Helvetica"
+                                    font.pixelSize: 18
+                                    text: "t0.1 opt 1/234"
+                                    opacity: 1
+                                }
                             }
                             Rectangle{
                                 id: lampFTFrame
@@ -147,15 +165,48 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 71
+                                Rectangle{
+                                    color: "red"
+                                    width: 20
+                                    height: 20
+                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
+                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
+                                }
+
+                                /*to create a set I use Item*/
+                                Item {
+                                    id: lampDelayFrameIconeText
+                                    /*Logo for the Menu, to put the white color I was using ColorOverlay*/
+                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
+                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
+                                    Image {
+                                        id:lampDelayFrameIcone
+                                        source:"baseline-timer-24px.svg"
+                                        sourceSize.width: 30
+                                        sourceSize.height: 30
+                                   }
+                                    ColorOverlay {
+                                        anchors.fill: lampDelayFrameIcone
+                                        source: lampDelayFrameIcone
+                                        color: "white"
+                                    }
+                                    /*in the horizontal line of the icone*/
+                                    Text {
+                                        id:lampDelayFrameText
+                                        text: "1.00s"
+                                        color: "white"
+                                        font.pixelSize: 20
+                                        font.family: "Helvetica"
+                                        anchors.verticalCenter: lampDelayFrameIcone.verticalCenter
+                                        x: 30
+                                    }
+
+                                }
+
+
+
                             }
                             /*only a half part from the rectangle has to be rounded*/
-                            Rectangle{
-                                id: onOffModRound
-                                color: "red"
-                                height: 10
-                                width: 150
-                                //anchors.top: onOffMod.top
-                            }
                             Rectangle{
                                 id: onOffMod
                                 Layout.alignment: Qt.AlignCenter
@@ -163,8 +214,7 @@ Window {
                                 color: "#20283F"
                                 opacity: 1
                                 width: 150
-                                height: 70
-                                //radius: 10
+                                height: 71
                             }
                         }
 
@@ -175,16 +225,6 @@ Window {
                         width: 150
                         height: 430
                         Layout.leftMargin: 16
-                        radius: 10
-                        GridLayout {
-                            columns: 1
-                            rows: 4
-                            //spacing: 1
-                            Rectangle{color: "red"; width: 100; height: 100}
-                            Rectangle{color: "green"; width: 100; height: 100}
-                            Rectangle{color: "blue"; width: 100; height: 100}
-                            Rectangle{color: "cyan"; width: 100; height: 100}
-                        }
                     }
                     Rectangle {
                         id: lamp3frame
@@ -192,7 +232,6 @@ Window {
                         width: 150
                         height: 430
                         Layout.leftMargin: 16
-                        radius: 10
                         Text {
                             anchors.centerIn: parent
                             font.family: "Helvetica"
@@ -207,7 +246,6 @@ Window {
                         height: 430
                         Layout.leftMargin: 16
                         Layout.rightMargin: 16
-                        radius: 10
                     }
                 }
             }
