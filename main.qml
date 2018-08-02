@@ -165,26 +165,19 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 71
-                                Rectangle{
-                                    color: "red"
-                                    width: 20
-                                    height: 20
-                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
-                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
-                                }
-
                                 /*to create a set I use Item*/
                                 Item {
                                     id: lampDelayFrameIconeText
                                     /*Logo for the Menu, to put the white color I was using ColorOverlay*/
                                     anchors.verticalCenter: lampDelayFrame.verticalCenter
-                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
+                                    //anchors.horizontalCenter: lampDelayFrame.horizontalCenter
+                                    //anchors.centerIn: parent
                                     Image {
                                         id:lampDelayFrameIcone
                                         source:"baseline-timer-24px.svg"
-                                        sourceSize.width: 30
-                                        sourceSize.height: 30
-                                   }
+                                        anchors.verticalCenter: lampDelayFrameIconeText.verticalCenter
+                                        anchors.horizontalCenter: lampDelayFrameIconeText.horizontalCenter
+                                    }
                                     ColorOverlay {
                                         anchors.fill: lampDelayFrameIcone
                                         source: lampDelayFrameIcone
@@ -200,11 +193,7 @@ Window {
                                         anchors.verticalCenter: lampDelayFrameIcone.verticalCenter
                                         x: 30
                                     }
-
                                 }
-
-
-
                             }
                             /*only a half part from the rectangle has to be rounded*/
                             Rectangle{
