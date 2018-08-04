@@ -156,18 +156,46 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 73
-                                Image {
-                                    id:lampFTFrameIcone
-                                    source:"thermometer.svg"
-                                    anchors.centerIn: parent
-                                    sourceSize.width: 25
-                                    sourceSize.height: 25
-
-                                }
-                                ColorOverlay {
-                                    anchors.fill: lampFTFrameIcone
-                                    source: lampFTFrameIcone
-                                    color: "white"
+                                Rectangle {
+                                    /*anchor with item take the middle of the first element, here the clock*/
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    color: "#20283F"
+                                    width: 150
+                                    height: 70
+                                    Row {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        spacing: 1
+                                        Rectangle {
+                                            width: 40
+                                            height: 25
+                                            color: "#20283F"
+                                            Image {
+                                                source:"thermometer.svg"
+                                                anchors.centerIn: parent
+                                                sourceSize.width: 25
+                                                sourceSize.height: 25
+                                                ColorOverlay {
+                                                    anchors.fill: parent
+                                                    source: parent
+                                                    color: "white"
+                                                }
+                                            }
+                                        }
+                                        Rectangle {
+                                            width: 60
+                                            height: 25
+                                            color: "#20283F"
+                                            Text {
+                                                text: "+400K"
+                                                color: "white"
+                                                font.pixelSize: 20
+                                                font.family: "Helvetica"
+                                                anchors.centerIn: parent
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             Rectangle{
