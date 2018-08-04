@@ -257,6 +257,41 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 71
+                                Row {
+                                          spacing: 0
+                                          Rectangle {
+                                              border.color: "black"
+                                              color: "#20283F"
+                                              width: 75;
+                                              height: 71
+                                              Image {
+                                                  source:"baseline-power_settings_new-24px.svg"
+                                                  anchors.centerIn: parent
+                                                  ColorOverlay {
+                                                      anchors.fill: parent
+                                                      source: parent
+                                                      color: "white"
+                                                  }
+                                              }
+
+                                          }
+                                          Rectangle {
+                                              border.color: "black"
+                                              color: "#20283F"
+                                              width: 75;
+                                              height: 71
+                                              Image {
+                                                  source:"baseline-wb_incandescent-24px.svg"
+                                                  anchors.centerIn: parent
+                                                  rotation: 180
+                                                  ColorOverlay {
+                                                      anchors.fill: parent
+                                                      source: parent
+                                                      color: "white"
+                                                  }
+                                              }
+                                          }
+                                    }
                             }
                         }
 
@@ -289,6 +324,7 @@ Window {
                         Layout.leftMargin: 16
                         Layout.rightMargin: 16
                     }
+
                 }
             }
         }

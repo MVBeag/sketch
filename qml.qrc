@@ -4,5 +4,7 @@
         <file>baseline-menu-24px.svg</file>
         <file>baseline-timer-24px.svg</file>
         <file>thermometer.svg</file>
+        <file>baseline-power_settings_new-24px.svg</file>
+        <file>baseline-wb_incandescent-24px.svg</file>
     </qresource>
 </RCC>
