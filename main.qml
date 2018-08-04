@@ -209,9 +209,8 @@ Window {
                                 /*to create a set I use Item*/
                                 Rectangle {
                                     /*anchor with item take the middle of the first element, here the clock*/
-                                    id: lampDelayFrameIconeText
-                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
-                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    anchors.verticalCenter: parent.verticalCenter
                                     color: "#20283F"
                                     width: 150
                                     height: 70
@@ -224,14 +223,13 @@ Window {
                                             height: 25
                                             color: "#20283F"
                                             Image {
-                                                id:lampDelayFrameIcone
                                                 source:"baseline-timer-24px.svg"
                                                 anchors.centerIn: parent
-                                            }
-                                            ColorOverlay {
-                                                anchors.fill: lampDelayFrameIcone
-                                                source: lampDelayFrameIcone
-                                                color: "white"
+                                                ColorOverlay {
+                                                    anchors.fill: parent
+                                                    source: parent
+                                                    color: "white"
+                                                }
                                             }
                                         }
                                         Rectangle {
@@ -239,7 +237,6 @@ Window {
                                             height: 25
                                             color: "#20283F"
                                             Text {
-                                                id:lampDelayFrameText
                                                 text: "1.00s"
                                                 color: "white"
                                                 font.pixelSize: 20
