@@ -156,6 +156,19 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 73
+                                Image {
+                                    id:lampFTFrameIcone
+                                    source:"thermometer.svg"
+                                    anchors.centerIn: parent
+                                    sourceSize.width: 25
+                                    sourceSize.height: 25
+
+                                }
+                                ColorOverlay {
+                                    anchors.fill: lampFTFrameIcone
+                                    source: lampFTFrameIcone
+                                    color: "white"
+                                }
                             }
                             Rectangle{
                                 id: lampDelayFrame
