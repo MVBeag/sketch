@@ -167,11 +167,10 @@ Window {
                                 height: 71
                                 /*to create a set I use Item*/
                                 Item {
+                                    /*anchor with item take the middle of the first element, here the clock*/
                                     id: lampDelayFrameIconeText
-                                    /*Logo for the Menu, to put the white color I was using ColorOverlay*/
-                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
                                     //anchors.horizontalCenter: lampDelayFrame.horizontalCenter
-                                    //anchors.centerIn: parent
+                                    anchors.verticalCenter: lampDelayFrame.verticalCenter
                                     Image {
                                         id:lampDelayFrameIcone
                                         source:"baseline-timer-24px.svg"
@@ -191,7 +190,7 @@ Window {
                                         font.pixelSize: 20
                                         font.family: "Helvetica"
                                         anchors.verticalCenter: lampDelayFrameIcone.verticalCenter
-                                        x: 30
+                                        x: 20
                                     }
                                 }
                             }
