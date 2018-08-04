@@ -166,32 +166,48 @@ Window {
                                 width: 150
                                 height: 71
                                 /*to create a set I use Item*/
-                                Item {
+                                Rectangle {
                                     /*anchor with item take the middle of the first element, here the clock*/
                                     id: lampDelayFrameIconeText
-                                    //anchors.horizontalCenter: lampDelayFrame.horizontalCenter
+                                    anchors.horizontalCenter: lampDelayFrame.horizontalCenter
                                     anchors.verticalCenter: lampDelayFrame.verticalCenter
-                                    Image {
-                                        id:lampDelayFrameIcone
-                                        source:"baseline-timer-24px.svg"
-                                        anchors.verticalCenter: lampDelayFrameIconeText.verticalCenter
-                                        anchors.horizontalCenter: lampDelayFrameIconeText.horizontalCenter
+                                    color: "#20283F"
+                                    width: 150
+                                    height: 70
+                                    Row {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        spacing: 1
+                                        Rectangle {
+                                            width: 40
+                                            height: 25
+                                            color: "#20283F"
+                                            Image {
+                                                id:lampDelayFrameIcone
+                                                source:"baseline-timer-24px.svg"
+                                                anchors.centerIn: parent
+                                            }
+                                            ColorOverlay {
+                                                anchors.fill: lampDelayFrameIcone
+                                                source: lampDelayFrameIcone
+                                                color: "white"
+                                            }
+                                        }
+                                        Rectangle {
+                                            width: 60
+                                            height: 25
+                                            color: "#20283F"
+                                            Text {
+                                                id:lampDelayFrameText
+                                                text: "1.00s"
+                                                color: "white"
+                                                font.pixelSize: 20
+                                                font.family: "Helvetica"
+                                                anchors.centerIn: parent
+                                            }
+                                        }
                                     }
-                                    ColorOverlay {
-                                        anchors.fill: lampDelayFrameIcone
-                                        source: lampDelayFrameIcone
-                                        color: "white"
-                                    }
-                                    /*in the horizontal line of the icone*/
-                                    Text {
-                                        id:lampDelayFrameText
-                                        text: "1.00s"
-                                        color: "white"
-                                        font.pixelSize: 20
-                                        font.family: "Helvetica"
-                                        anchors.verticalCenter: lampDelayFrameIcone.verticalCenter
-                                        x: 20
-                                    }
+
                                 }
                             }
                             /*only a half part from the rectangle has to be rounded*/
