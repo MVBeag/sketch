@@ -6,5 +6,7 @@
         <file>thermometer.svg</file>
         <file>baseline-power_settings_new-24px.svg</file>
         <file>baseline-wb_incandescent-24px.svg</file>
+        <file>baseline-keyboard_arrow_down-24px.svg</file>
+        <file>baseline-keyboard_arrow_up-24px.svg</file>
     </qresource>
 </RCC>

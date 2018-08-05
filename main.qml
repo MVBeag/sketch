@@ -124,12 +124,71 @@ Window {
                                 opacity: 1
                                 width: 150
                                 height: 125
-                                Text {
-                                    anchors.centerIn: parent
-                                    font.family: "Helvetica"
-                                    font.pixelSize: 32
-                                    text: "7.5"
-                                    opacity: 1
+                                Row {
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    spacing: 1
+                                    Rectangle{
+                                        width: 25
+                                        height: 100
+                                        color: "red"//"#60C6F2"
+                                    }
+                                    Rectangle{
+                                        width: 85
+                                        height: 100
+                                        color: "red"//"#60C6F2"
+                                        Text {
+                                            anchors.horizontalCenter: parent.horizontalCenter
+                                            anchors.verticalCenter: parent.verticalCenter
+                                            font.family: "Helvetica"
+                                            font.pixelSize: 50
+                                            font.bold: true
+                                            text: "7.0"
+                                            color: "black"
+                                            opacity: 1
+                                        }
+                                    }
+                                    Rectangle{
+                                        width: 25
+                                        height: 100
+                                        color: "#60C6F2"
+                                        Column{
+                                            anchors.horizontalCenter: parent.horizontalCenter
+                                            anchors.verticalCenter: parent.verticalCenter
+                                            Rectangle{
+                                                width: 20
+                                                height: 25
+                                                color: "blue"//"#60C6F2"
+                                                Image {
+                                                    source:"baseline-keyboard_arrow_up-24px.svg"
+                                                    anchors.centerIn: parent
+                                                    sourceSize.width: 25
+                                                    sourceSize.height: 25
+                                                    ColorOverlay {
+                                                        anchors.fill: parent
+                                                        source: parent
+                                                        color: "white"
+                                                    }
+                                                }
+                                            }
+                                            Rectangle{
+                                                width: 20
+                                                height: 25
+                                                color: "green"//"#60C6F2"
+                                                Image {
+                                                    source:"baseline-keyboard_arrow_down-24px.svg"
+                                                    anchors.centerIn: parent
+                                                    sourceSize.width: 25
+                                                    sourceSize.height: 25
+                                                    ColorOverlay {
+                                                        anchors.fill: parent
+                                                        source: parent
+                                                        color: "white"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             Rectangle{
@@ -258,40 +317,40 @@ Window {
                                 width: 150
                                 height: 71
                                 Row {
-                                          spacing: 0
-                                          Rectangle {
-                                              border.color: "black"
-                                              color: "#20283F"
-                                              width: 75;
-                                              height: 71
-                                              Image {
-                                                  source:"baseline-power_settings_new-24px.svg"
-                                                  anchors.centerIn: parent
-                                                  ColorOverlay {
-                                                      anchors.fill: parent
-                                                      source: parent
-                                                      color: "white"
-                                                  }
-                                              }
+                                    spacing: 0
+                                    Rectangle {
+                                        border.color: "black"
+                                        color: "#20283F"
+                                        width: 75;
+                                        height: 71
+                                        Image {
+                                            source:"baseline-power_settings_new-24px.svg"
+                                            anchors.centerIn: parent
+                                            ColorOverlay {
+                                                anchors.fill: parent
+                                                source: parent
+                                                color: "white"
+                                            }
+                                        }
 
-                                          }
-                                          Rectangle {
-                                              border.color: "black"
-                                              color: "#20283F"
-                                              width: 75;
-                                              height: 71
-                                              Image {
-                                                  source:"baseline-wb_incandescent-24px.svg"
-                                                  anchors.centerIn: parent
-                                                  rotation: 180
-                                                  ColorOverlay {
-                                                      anchors.fill: parent
-                                                      source: parent
-                                                      color: "white"
-                                                  }
-                                              }
-                                          }
                                     }
+                                    Rectangle {
+                                        border.color: "black"
+                                        color: "#20283F"
+                                        width: 75;
+                                        height: 71
+                                        Image {
+                                            source:"baseline-wb_incandescent-24px.svg"
+                                            anchors.centerIn: parent
+                                            rotation: 180
+                                            ColorOverlay {
+                                                anchors.fill: parent
+                                                source: parent
+                                                color: "white"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
 
