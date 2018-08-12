@@ -137,21 +137,22 @@ Window {
                                         width: 85
                                         height: 100
                                         color: "red"//"#60C6F2"
+
+                                        /*warning to align the text in the Rectangle the
+                                        height have to be enough
+                                        to accept the height of the text
+                                        otherwise the alignement doesn't work*/
                                         Text {
-                                            anchors.horizontalCenter: parent.horizontalCenter
-                                            anchors.verticalCenter: parent.verticalCenter
+                                            anchors.centerIn: parent
                                             font.family: "Helvetica"
-                                            font.pixelSize: 50
-                                            font.bold: true
+                                            font.pixelSize: 32
                                             text: "7.0"
-                                            color: "black"
-                                            opacity: 1
                                         }
                                     }
                                     Rectangle{
                                         width: 25
                                         height: 100
-                                        color: "#60C6F2"
+                                        color: "white"//"#60C6F2"
                                         Column{
                                             anchors.horizontalCenter: parent.horizontalCenter
                                             anchors.verticalCenter: parent.verticalCenter
@@ -368,6 +369,11 @@ Window {
                         width: 150
                         height: 430
                         Layout.leftMargin: 16
+                        Rectangle {
+                            width: 50
+                            height: 50
+                            anchors.centerIn: parent
+                        }
                         Text {
                             anchors.centerIn: parent
                             font.family: "Helvetica"
