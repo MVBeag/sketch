@@ -13,7 +13,7 @@ Window {
     /*To start with a new repository git clone https://github.com/VoegelMichael/sketch.git*/
     Rectangle {
         id: background
-        color: "grey"
+        color: "black"
         anchors.fill: parent
         ColumnLayout{
             spacing: 10
@@ -21,7 +21,6 @@ Window {
                 id: topframe
                 Layout.alignment: Qt.AlignCenter
                 color: "black"
-                border.color: "white"
                 Layout.preferredWidth: parent.width
                 Layout.preferredHeight: 40
                 Layout.topMargin:10
@@ -56,7 +55,7 @@ Window {
 
             Rectangle {
                 id: bottomframe
-                color: "#e27373"
+                color: "black"
                 width: 640
                 height: 430
 
@@ -65,7 +64,7 @@ Window {
                     anchors.fill: bottomframe
                     Rectangle {
                         id: lamp1frame
-                        color: "red"
+                        color: "black"
                         width: 150
                         height: 430
                         Layout.leftMargin: 16
