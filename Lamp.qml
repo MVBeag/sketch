@@ -86,11 +86,13 @@ Rectangle {
                     to accept the height of the text
                     otherwise the alignement doesn't work*/
                     Text {
+                        id: energyDisplay
+                        property int energy: 7
                         anchors.centerIn: parent
                         font.family: "Helvetica"
                         font.pixelSize: 32
                         color: "white"
-                        text: "7.0"
+                        text: Number(energy)
                     }
                 }
                 Rectangle{
@@ -104,6 +106,12 @@ Rectangle {
                             width: 20
                             height: 25
                             color: "#20283F"
+                            MouseArea{
+                                anchors.fill: parent
+                                onClicked: {
+                                    energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy + 1)
+                                }
+                            }
                             Image {
                                 source:"baseline-keyboard_arrow_up-24px.svg"
                                 anchors.centerIn: parent
@@ -120,6 +128,12 @@ Rectangle {
                             width: 20
                             height: 25
                             color: "#20283F"
+                            MouseArea{
+                                anchors.fill: parent
+                                onClicked: {
+                                    energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy - 1)
+                                }
+                            }
                             Image {
                                 source:"baseline-keyboard_arrow_down-24px.svg"
                                 anchors.centerIn: parent
