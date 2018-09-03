@@ -8,5 +8,7 @@
         <file>baseline-wb_incandescent-24px.svg</file>
         <file>baseline-keyboard_arrow_down-24px.svg</file>
         <file>baseline-keyboard_arrow_up-24px.svg</file>
+        <file>Lamp.qml</file>
+        <file>Topframe.qml</file>
     </qresource>
 </RCC>
