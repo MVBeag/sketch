@@ -13,13 +13,15 @@ Window {
     Rectangle {
         id: mainPage
         z: 1
-        color: "white"
+        color: "black"
         anchors.fill: parent
         Image {
-            anchors.centerIn: parent
-            sourceSize.width: 400
-            sourceSize.height: 400
-            source: "broncolor_light.png"
+            //anchors.centerIn: parent
+            x: 15
+            y: 70
+            sourceSize.width: 350
+            sourceSize.height: 350
+            source: "broncolor_white.png"
         }
         MouseArea{
             anchors.fill: parent

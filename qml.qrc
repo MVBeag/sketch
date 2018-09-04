@@ -10,6 +10,6 @@
         <file>baseline-keyboard_arrow_up-24px.svg</file>
         <file>Lamp.qml</file>
         <file>Topframe.qml</file>
-        <file>broncolor_light.png</file>
+        <file>broncolor_white.png</file>
     </qresource>
 </RCC>
