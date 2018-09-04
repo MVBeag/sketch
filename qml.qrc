@@ -11,5 +11,6 @@
         <file>Lamp.qml</file>
         <file>Topframe.qml</file>
         <file>broncolor_white.png</file>
+        <file>MainPage.qml</file>
     </qresource>
 </RCC>
