@@ -15,13 +15,24 @@ Window {
         z: 1
         color: "black"
         anchors.fill: parent
+        property int mainPageLeftMargin: 15
         Image {
-            //anchors.centerIn: parent
-            x: 15
-            y: 70
+            id: broncolorLogo
+            x: 35
+            y: 65
             sourceSize.width: 350
             sourceSize.height: 350
             source: "broncolor_white.png"
+        }
+        Text {
+            anchors.left: broncolorLogo. left
+            //anchors.leftMargin: mainPage.mainPageLeftMargin
+            anchors.top: broncolorLogo. bottom
+            anchors.topMargin: 15
+            font.family: "Calibri Light"
+            font.pixelSize: 85
+            color: "white"
+            text: "Scoro S"
         }
         MouseArea{
             anchors.fill: parent
