@@ -12,5 +12,6 @@
         <file>Topframe.qml</file>
         <file>broncolor_white.png</file>
         <file>MainPage.qml</file>
+        <file>Master.qml</file>
     </qresource>
 </RCC>

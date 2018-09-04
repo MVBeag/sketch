@@ -40,14 +40,7 @@ Window {
                     Lamp{
                         lampName: "3"
                     }
-                    Rectangle {
-                        id: mainframe
-                        color: "#60C6F2"
-                        width: 90
-                        height: 430
-                        Layout.leftMargin: 16
-                        Layout.rightMargin: 16
-                    }
+                    Master{}
 
                 }
             }
