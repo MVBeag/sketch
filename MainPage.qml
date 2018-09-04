@@ -18,14 +18,27 @@ Rectangle {
         source: "broncolor_white.png"
     }
     Text {
+        id: textScoroS
         anchors.left: broncolorLogo. left
-        //anchors.leftMargin: mainPage.mainPageLeftMargin
         anchors.top: broncolorLogo. bottom
         anchors.topMargin: 15
         font.family: "Calibri Light"
         font.pixelSize: 85
         color: "white"
         text: "Scoro S"
+    }
+    Text {
+        anchors.left: broncolorLogo. left
+        anchors.top: textScoroS. bottom
+        anchors.topMargin: 15
+        font.family: "Calibri Light"
+        font.pixelSize: 21
+        color: "#939393"
+        text: "letzte Einstellungen werden geladen... <br><br>
+               Studio 5 <br>
+               3 Lampen (1 - 2 - 3) <br><br>
+               t0.1 = 1/1000 <br>
+               Speedmode: HSS"
     }
     MouseArea{
         anchors.fill: parent
