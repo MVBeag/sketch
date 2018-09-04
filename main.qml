@@ -10,6 +10,24 @@ Window {
     height: 480
     title: qsTr("click-dummy-hardkeys")
 
+    Rectangle {
+        id: mainPage
+        z: 1
+        color: "white"
+        anchors.fill: parent
+        Image {
+            anchors.centerIn: parent
+            sourceSize.width: 400
+            sourceSize.height: 400
+            source: "broncolor_light.png"
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                parent.z = 0
+            }
+        }
+    }
 
     /*To start with a new repository git clone https://github.com/VoegelMichael/sketch.git*/
     Rectangle {
