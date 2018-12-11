@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.11
+import QtQuick.Layouts 1.3
 
 Rectangle {
     id: lamp1frame
@@ -105,12 +105,15 @@ Rectangle {
                         Rectangle{
                             width: 20
                             height: 25
-                            color: "#20283F"
-                            MouseArea{
+                            color: "red"
+                            MultiPointTouchArea{
+                                id: maTest
                                 anchors.fill: parent
-                                onClicked: {
+                                onPressed: {
+                                    console.log("onPressed")
                                     energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy + 1)
                                 }
+                                Component.onCompleted: console.log(maTest.mapToGlobal(maTest.x, maTest.y).x + "/" + maTest.mapToGlobal(maTest.x, maTest.y))
                             }
                             Image {
                                 source:"baseline-keyboard_arrow_up-24px.svg"

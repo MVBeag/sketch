@@ -1,5 +1,7 @@
-QT += quick
-CONFIG += c++11
+QT += core quick qml
+#CONFIG += c++11 \
+#          static
+# CONFIG += qt static
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -12,18 +14,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES += \
-        main.cpp
+SOURCES += main.cpp \
+    eventfilter.cpp
 
 RESOURCES += qml.qrc
 
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+target.path = /
+INSTALLS += target
 
-# Additional import path used to resolve QML modules just for Qt Quick Designer
-QML_DESIGNER_IMPORT_PATH =
+HEADERS += \
+    eventfilter.h
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+
+#LIBS += -L /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-fb/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/include/ -tslib
+
+#LIBS += -L/PATH_TO_SDK_FILESYSTEMROOT/usr/lib/ -lts
+#INCLUDEPATH += /PATH_TO_SDK_FILESYSTEMROOT/usr/lib
+#DEPENDPATH += /PATH_TO_SDK_FILESYSTEMROOT/usr/lib
