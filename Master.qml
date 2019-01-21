@@ -1,8 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.11
-import QtQuick.Extras 1.4
+import QtQuick.Layouts 1.3
 
 Rectangle {
     id: mainframe
@@ -37,17 +36,6 @@ Rectangle {
             color: "#20283F"
             width: 90
             height: 350
-            Gauge {
-                minimumValue: 20
-                value: 50
-                maximumValue: 100
-                minorTickmarkCount: 10
-                anchors.top: parent.top
-                anchors.topMargin: 10
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: 10
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
         }
         Rectangle{
             Layout.alignment: Qt.AlignCenter

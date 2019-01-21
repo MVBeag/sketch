@@ -1,13 +1,14 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.11
+import QtQuick.Layouts 1.3
 
 Window {
     id: mainWindows
     visible: true
     width: 640
     height: 480
+    //visibility: "FullScreen"
     title: qsTr("click-dummy-hardkeys")
 
     MainPage{}
@@ -35,7 +36,7 @@ Window {
                         lampName: "1"
                     }
                     Lamp{
-                        lampName: "2"
+                        lampName: "4"
                     }
                     Lamp{
                         lampName: "3"

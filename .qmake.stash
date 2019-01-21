@@ -1,0 +1,22 @@
+QMAKE_CXX.INCDIRS = \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/include/c++/7.3.0 \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/include/c++/7.3.0/arm-dey-linux-gnueabi \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/include/c++/7.3.0/backward \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/x86_64-deysdk-linux/usr/lib/arm-dey-linux-gnueabi/gcc/arm-dey-linux-gnueabi/7.3.0/include \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/lib/gcc/arm-dey-linux-gnueabi/7.3.0/include \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/x86_64-deysdk-linux/usr/lib/arm-dey-linux-gnueabi/gcc/arm-dey-linux-gnueabi/7.3.0/include-fixed \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/include
+QMAKE_CXX.LIBDIRS = \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/x86_64-deysdk-linux/usr/lib/arm-dey-linux-gnueabi/gcc/arm-dey-linux-gnueabi/7.3.0 \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/lib \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/lib/arm-dey-linux-gnueabi/7.3.0 \
+    /home/voegelm/NG2018/dey/2.4-r1/ccimx6ulsbc/dey-image-qt-x11/sysroots/cortexa7hf-neon-dey-linux-gnueabi/usr/lib
+QMAKE_CXX.QT_COMPILER_STDCXX = 201402L
+QMAKE_CXX.QMAKE_GCC_MAJOR_VERSION = 7
+QMAKE_CXX.QMAKE_GCC_MINOR_VERSION = 3
+QMAKE_CXX.QMAKE_GCC_PATCH_VERSION = 0
+QMAKE_CXX.COMPILER_MACROS = \
+    QT_COMPILER_STDCXX \
+    QMAKE_GCC_MAJOR_VERSION \
+    QMAKE_GCC_MINOR_VERSION \
+    QMAKE_GCC_PATCH_VERSION

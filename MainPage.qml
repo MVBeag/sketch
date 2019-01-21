@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.11
+import QtQuick.Layouts 1.3
 
 Rectangle {
     id: mainPage
@@ -41,8 +41,18 @@ Rectangle {
                Speedmode: HSS"
     }
     MouseArea{
+        id:matest1
         anchors.fill: parent
+        enabled: true
+        propagateComposedEvents: true
+        hoverEnabled: true
+        /*
+        positionChanged:{
+            console.log(mouse.x + " absX " + matest1.mapToGlobal(matest1.x))
+            console.log(mouse.y + " absY " + matest1.mapToGlobal(matest1.y))
+        }*/
         onClicked: {
+            console.log("hit x/y " + mouseX + " / " + mouseY)
             parent.z = 0
         }
     }

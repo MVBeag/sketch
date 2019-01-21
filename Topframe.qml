@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.11
+import QtQuick.Layouts 1.3
 
 
 Rectangle {
