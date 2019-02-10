@@ -62,7 +62,7 @@ Rectangle {
         Rectangle{
             id: lampEnergyFrame
             Layout.alignment: Qt.AlignCenter
-            border.color: "black"
+            border.color: "red"
             color: "#20283F"
             opacity: 1
             width: 150
@@ -156,7 +156,7 @@ Rectangle {
         Rectangle{
             id: lampTimeFrame
             Layout.alignment: Qt.AlignCenter
-            border.color: "black"
+            border.color: "white"
             color: "#20283F"
             opacity: 1
             width: 150
@@ -252,7 +252,6 @@ Rectangle {
                     }
                 }
             }
-
         }
         /*only a half part from the rectangle has to be rounded*/
         Rectangle{

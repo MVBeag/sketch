@@ -13,5 +13,7 @@
         <file>broncolor_white.png</file>
         <file>MainPage.qml</file>
         <file>Master.qml</file>
+        <file>baseline-wifi-24px.svg</file>
+        <file>baseline-battery_charging_full-24px.svg</file>
     </qresource>
 </RCC>
