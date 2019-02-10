@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.3
+import QtQuick.Extras 1.4
 
 Rectangle {
     id: mainframe
@@ -36,6 +37,13 @@ Rectangle {
             color: "#20283F"
             width: 90
             height: 350
+            Gauge {
+                minimumValue: 20
+                value: 50
+                maximumValue: 100
+                anchors.alignWhenCentered: parent
+                //anchors.centerIn: parent
+            }
         }
         Rectangle{
             Layout.alignment: Qt.AlignCenter
