@@ -177,45 +177,37 @@ Rectangle {
             color: "#20283F"
             opacity: 1
             width: 150
-            height: 73
-            Rectangle {
-                /*anchor with item take the middle of the first element, here the clock*/
+            height: 73 
+            Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                color: "#20283F"
-                width: 150
-                height: 70
-                Row {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
-                    spacing: 1
-                    Rectangle {
-                        width: 40
-                        height: 25
-                        color: "#20283F"
-                        Image {
-                            source:"thermometer.svg"
-                            anchors.centerIn: parent
-                            sourceSize.width: 25
-                            sourceSize.height: 25
-                            ColorOverlay {
-                                anchors.fill: parent
-                                source: parent
-                                color: "white"
-                            }
+                spacing: 1
+                Rectangle {
+                    width: 40
+                    height: 25
+                    color: "#20283F"
+                    Image {
+                        source:"thermometer.svg"
+                        anchors.centerIn: parent
+                        sourceSize.width: 25
+                        sourceSize.height: 25
+                        ColorOverlay {
+                            anchors.fill: parent
+                            source: parent
+                            color: "white"
                         }
                     }
-                    Rectangle {
-                        width: 60
-                        height: 25
-                        color: "#20283F"
-                        Text {
-                            text: "+400K"
-                            color: "white"
-                            font.pixelSize: 20
-                            font.family: "Helvetica"
-                            anchors.centerIn: parent
-                        }
+                }
+                Rectangle {
+                    width: 60
+                    height: 25
+                    color: "#20283F"
+                    Text {
+                        text: "+400K"
+                        color: "white"
+                        font.pixelSize: 20
+                        font.family: "Helvetica"
+                        anchors.centerIn: parent
                     }
                 }
             }
@@ -228,47 +220,39 @@ Rectangle {
             opacity: 1
             width: 150
             height: 71
-            /*to create a set I use Item*/
-            Rectangle {
-                /*anchor with item take the middle of the first element, here the clock*/
+            /*to create a set I use Item*/     
+            Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                color: "#20283F"
-                width: 150
-                height: 70
-                Row {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
-                    spacing: 1
-                    Rectangle {
-                        width: 40
-                        height: 25
-                        color: "#20283F"
-                        Image {
-                            source:"baseline-timer-24px.svg"
-                            anchors.centerIn: parent
-                            ColorOverlay {
-                                anchors.fill: parent
-                                source: parent
-                                color: "white"
-                            }
-                        }
-                    }
-                    Rectangle {
-                        width: 60
-                        height: 25
-                        color: "#20283F"
-                        Text {
-                            text: "1.00s"
+                spacing: 1
+                Rectangle {
+                    width: 40
+                    height: 25
+                    color: "#20283F"
+                    Image {
+                        source:"baseline-timer-24px.svg"
+                        anchors.centerIn: parent
+                        ColorOverlay {
+                            anchors.fill: parent
+                            source: parent
                             color: "white"
-                            font.pixelSize: 20
-                            font.family: "Helvetica"
-                            anchors.centerIn: parent
                         }
                     }
                 }
-
+                Rectangle {
+                    width: 60
+                    height: 25
+                    color: "#20283F"
+                    Text {
+                        text: "1.00s"
+                        color: "white"
+                        font.pixelSize: 20
+                        font.family: "Helvetica"
+                        anchors.centerIn: parent
+                    }
+                }
             }
+
         }
         /*only a half part from the rectangle has to be rounded*/
         Rectangle{
