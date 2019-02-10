@@ -106,10 +106,10 @@ Rectangle {
                             width: 20
                             height: 25
                             color: "red"
-                            MultiPointTouchArea{
+                            MouseArea{
                                 id: maTest
                                 anchors.fill: parent
-                                onPressed: {
+                                onClicked: {
                                     console.log("onPressed")
                                     energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy + 1)
                                 }
@@ -130,7 +130,7 @@ Rectangle {
                         Rectangle{
                             width: 20
                             height: 25
-                            color: "#20283F"
+                            color: "red"
                             MouseArea{
                                 anchors.fill: parent
                                 onClicked: {
