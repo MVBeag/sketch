@@ -13,6 +13,16 @@ Rectangle {
     Layout.preferredHeight: 40
     Layout.topMargin:10
     /*Logo for the Menu, to put the white color I was using ColorOverlay*/
+    MouseArea{
+        id:matest1
+        anchors.fill: parent
+        enabled: true
+        propagateComposedEvents: true
+        hoverEnabled: true
+        onClicked: {
+            parent.z = 2
+        }
+    }
     Image {
         id:menubron
         property bool vc: false

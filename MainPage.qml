@@ -46,11 +46,6 @@ Rectangle {
         enabled: true
         propagateComposedEvents: true
         hoverEnabled: true
-        /*
-        positionChanged:{
-            console.log(mouse.x + " absX " + matest1.mapToGlobal(matest1.x))
-            console.log(mouse.y + " absY " + matest1.mapToGlobal(matest1.y))
-        }*/
         onClicked: {
             console.log("hit x/y " + mouseX + " / " + mouseY)
             parent.z = 0
