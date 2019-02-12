@@ -98,13 +98,13 @@ Rectangle {
                             otherwise the alignement doesn't work*/
                             Text {
                                 id: energyDisplay
-                                property int energy: 7
+                                property int energy: 20
                                 anchors.centerIn: parent
                                 font.family: "Helvetica"
                                 font.pixelSize: 62
                                 font.bold: true
-                                color: "white"
-                                text: Number(energy)
+                                color: "red"
+                                text: Number(energy/10)
                             }
                         }
                         Rectangle{
@@ -121,9 +121,21 @@ Rectangle {
                                     MouseArea{
                                         id: maTest
                                         anchors.fill: parent
+                                        propagateComposedEvents: true
                                         onClicked: {
                                             console.log("onPressed")
-                                            energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy + 1)
+                                            if (energyDisplay.energy < 100)
+                                            {
+                                              energyDisplay.energy = energyDisplay.energy + 1;
+                                            }
+                                            //console.log();
+                                        }
+                                        onPressAndHold: {
+                                            console.log("longPressed")
+                                            if (energyDisplay.energy <= 90)
+                                            {
+                                              energyDisplay.energy = energyDisplay.energy + 10;
+                                            }
                                         }
                                         Component.onCompleted: console.log(maTest.mapToGlobal(maTest.x, maTest.y).x + "/" + maTest.mapToGlobal(maTest.x, maTest.y))
                                     }
@@ -145,8 +157,19 @@ Rectangle {
                                     color: "transparent"
                                     MouseArea{
                                         anchors.fill: parent
+                                        propagateComposedEvents: true
                                         onClicked: {
-                                            energyDisplay.text = Number(energyDisplay.energy = energyDisplay.energy - 1)
+                                            if (energyDisplay.energy > 20)
+                                            {
+                                              energyDisplay.energy = energyDisplay.energy - 1;
+                                            }
+                                        }
+                                        onPressAndHold: {
+                                            console.log("longPressed")
+                                            if (energyDisplay.energy >= 30)
+                                            {
+                                              energyDisplay.energy = energyDisplay.energy - 10;
+                                            }
                                         }
                                     }
                                     Image {
