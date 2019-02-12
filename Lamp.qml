@@ -112,8 +112,10 @@ Rectangle {
                             height: 100
                             color: "transparent"
                             Column{
+                                id: energyControl
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.verticalCenter: parent.verticalCenter
+                                property int t_fastEnergy: 1000
                                 Rectangle{
                                     width: 20
                                     height: 25
@@ -122,23 +124,38 @@ Rectangle {
                                         id: maTest
                                         anchors.fill: parent
                                         propagateComposedEvents: true
+
                                         onClicked: {
                                             console.log("onPressed")
                                             if (energyDisplay.energy < 100)
                                             {
-                                              energyDisplay.energy = energyDisplay.energy + 1;
+                                                energyDisplay.energy = energyDisplay.energy + 1;
                                             }
-                                            //console.log();
                                         }
+
                                         onPressAndHold: {
-                                            console.log("longPressed")
-                                            if (energyDisplay.energy <= 90)
-                                            {
-                                              energyDisplay.energy = energyDisplay.energy + 10;
+                                            fastEnergyInc.start()
+                                        }
+
+                                        onReleased: {
+                                            fastEnergyInc.stop()
+                                        }
+
+                                        Component.onCompleted: console.log(maTest.mapToGlobal(maTest.x, maTest.y).x + "/" + maTest.mapToGlobal(maTest.x, maTest.y))
+
+                                        Timer{
+                                            id: fastEnergyInc
+                                            interval: energyControl.t_fastEnergy; repeat: true;
+                                            onTriggered: {
+                                                console.log("longPressed")
+                                                if (energyDisplay.energy <= 90)
+                                                {
+                                                    energyDisplay.energy = energyDisplay.energy + 10;
+                                                }
                                             }
                                         }
-                                        Component.onCompleted: console.log(maTest.mapToGlobal(maTest.x, maTest.y).x + "/" + maTest.mapToGlobal(maTest.x, maTest.y))
                                     }
+
                                     Image {
                                         source:"baseline-keyboard_arrow_up-24px.svg"
                                         anchors.centerIn: parent
@@ -158,17 +175,31 @@ Rectangle {
                                     MouseArea{
                                         anchors.fill: parent
                                         propagateComposedEvents: true
+
                                         onClicked: {
                                             if (energyDisplay.energy > 20)
                                             {
-                                              energyDisplay.energy = energyDisplay.energy - 1;
+                                                energyDisplay.energy = energyDisplay.energy - 1;
                                             }
                                         }
+
                                         onPressAndHold: {
-                                            console.log("longPressed")
-                                            if (energyDisplay.energy >= 30)
-                                            {
-                                              energyDisplay.energy = energyDisplay.energy - 10;
+                                            fastEnergyDec.start()
+                                        }
+
+                                        onReleased: {
+                                            fastEnergyDec.stop()
+                                        }
+
+                                        Timer{
+                                            id: fastEnergyDec
+                                            interval: energyControl.t_fastEnergy; repeat: true;
+                                            onTriggered: {
+                                                console.log("longPressed")
+                                                if (energyDisplay.energy >= 30)
+                                                {
+                                                    energyDisplay.energy = energyDisplay.energy - 10;
+                                                }
                                             }
                                         }
                                     }
@@ -205,7 +236,7 @@ Rectangle {
                         opacity: 1
                     }
                 }
-        }
+            }
         }
         Rectangle{
             id: lampFTFrame
@@ -214,7 +245,7 @@ Rectangle {
             color: "#20283F"
             opacity: 1
             width: 150
-            height: 73 
+            height: 73
             Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
@@ -257,7 +288,7 @@ Rectangle {
             opacity: 1
             width: 150
             height: 71
-            /*to create a set I use Item*/     
+            /*to create a set I use Item*/
             Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
