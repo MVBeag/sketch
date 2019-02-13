@@ -33,16 +33,18 @@ Rectangle {
             }
         }
         Rectangle{
+            id: masterEnergy
             Layout.alignment: Qt.AlignCenter
             color: "#20283F"
             width: 90
             height: 350
             Gauge {
+                id: masterEnergyGauge
                 minimumValue: 20
-                value: 50
                 maximumValue: 100
-                anchors.alignWhenCentered: parent
-                //anchors.centerIn: parent
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
             }
         }
         Rectangle{
