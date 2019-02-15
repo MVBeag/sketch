@@ -104,7 +104,7 @@ Rectangle {
                                 font.pixelSize: 62
                                 font.bold: true
                                 color: "red"
-                                text: Number(energy/10)
+                                text: myLamp1.energy//Number(energy/10)
                             }
                         }
                         Rectangle{

@@ -6,11 +6,13 @@
 class lamp : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int energy READ energy WRITE setEnergy NOTIFY energyChanged)
 public:
     explicit lamp(QObject *parent = nullptr);
-    void energy(int energy);
+    void setEnergy(int energy);
+    int energy(void);
 signals:
-
+    void energyChanged();
 public slots:
 
 private:
