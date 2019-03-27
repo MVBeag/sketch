@@ -4,12 +4,23 @@
 #include <QObject>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QScreen>
+#include <QDebug>
+#include <QLoggingCategory>
 #include "eventfilter.h"
 #include "lamp.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
+    /*Display the screen size*/
+    auto scrs = app.screens();
+    for(int i = 0; i<scrs.size();i++){
+        qDebug() << scrs[i]->availableGeometry();
+    }
+    QLoggingCategory::setFilterRules(QStringLiteral("qt.qpa.input = true"));
+
 
     lamp lamp_1;
 
@@ -25,3 +36,4 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
+

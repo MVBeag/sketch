@@ -40,6 +40,7 @@ Rectangle {
                t0.1 = 1/1000 <br>
                Speedmode: HSS"
     }
+
     MouseArea{
         id:matest1
         anchors.fill: parent
@@ -51,4 +52,5 @@ Rectangle {
             parent.z = 0
         }
     }
+
 }

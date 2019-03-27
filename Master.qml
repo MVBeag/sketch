@@ -2,7 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.3
-import QtQuick.Extras 1.4
+//import QtQuick.Extras 1.4
 
 Rectangle {
     id: mainframe
@@ -38,6 +38,7 @@ Rectangle {
             color: "#20283F"
             width: 90
             height: 350
+            /*
             Gauge {
                 id: masterEnergyGauge
                 minimumValue: 20
@@ -46,6 +47,7 @@ Rectangle {
                 anchors.bottom: parent.bottom
                 anchors.horizontalCenter: parent.horizontalCenter
             }
+            */
         }
         Rectangle{
             Layout.alignment: Qt.AlignCenter

@@ -141,8 +141,6 @@ Rectangle {
                                             fastEnergyInc.stop()
                                         }
 
-                                        Component.onCompleted: console.log(maTest.mapToGlobal(maTest.x, maTest.y).x + "/" + maTest.mapToGlobal(maTest.x, maTest.y))
-
                                         Timer{
                                             id: fastEnergyInc
                                             interval: energyControl.t_fastEnergy; repeat: true;
